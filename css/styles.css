@@ -1,0 +1,622 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --verde: #0C7D74;
+    --naranja: #634A00;
+    --hover: #0F353D;
+    --blanco: #fff;
+    --fondo: #CEEBE6;
+}
+
+body {
+    background-image: url(../img/catedral2.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    font-family: 'Akshar', sans-serif;
+}
+
+
+.titulo {
+    height: 30rem;
+    text-align: center;
+    padding-top: 10vh;
+}
+
+.titulo h1 {
+    color: var(--blanco);
+    font-size: 10em;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 1px 1px 10px black;
+}
+
+.titulo h2 {
+    color: var(--blanco);
+    font-weight: 400;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 10px black;
+}
+
+
+/* ------------ BARRA DE NAVEGACION----------- */
+
+.barraSuperior {
+    display: flex;
+    flex-direction: column;
+    padding-left: 4em;
+}
+
+.barraSuperior p {
+    padding-top: .2em;
+    font-size: .8em;
+    font-weight: 300;
+    color: var(--fondo);
+}
+
+.nav {
+    background-color: var(--verde);
+    height: 10vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 0.8em;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    padding-right: 4em;
+}
+
+.nav ul {
+    display: flex;
+    list-style: none;
+}
+
+
+.nav li {
+    padding: 1em;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.nav a:hover {
+    padding: .8em;
+    border-radius: .8em;
+    background-color: var(--hover);
+    transition: all .6s;
+}
+
+.nav ul {
+    display: flex;
+}
+
+.drawer {
+    justify-content: flex-end;
+    cursor: pointer;
+    display: none;
+    padding-right: 4em;
+    font-size: 2em;
+    color: var(--fondo);
+    align-items: center;
+}
+
+#ckbox {
+    display: none;
+}
+
+/*media query*/
+
+@media (max-width:1039px) {
+    nav {
+        justify-content: space-between;
+    }
+
+    .drawer {
+        display: block;
+        padding-right: 1vw;
+    }
+
+
+    nav h1 {
+        margin-left: 1rem;
+    }
+
+    ul {
+        position: fixed;
+        width: 50%;
+        height: 100vh;
+        background-color: var(--verde);
+        top: 10vh;
+        right: -100%;
+        text-align: left;
+        transition: all .5s;
+        display: flex;
+        flex-direction: column;
+        align-content: stretch;
+        z-index: 1;
+    }
+
+    #ckbox:checked~.menu-box {
+        right: 0;
+    }
+}
+
+
+/* ------------------CIUDAD DE LAS DIAGONALES--------------------- */
+
+
+#articulo1 {
+    height: 20rem;
+    background-color: var(--fondo);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: .2em solid var(--naranja);
+    border-bottom: .2em solid var(--naranja);
+    margin-bottom: 10vh;
+}
+
+.texto1 p {
+    padding: .5em 5em;
+    line-height: 1.7em;
+}
+
+#articulo1 img {
+    max-height: 10em;
+    padding-right: 6em;
+}
+
+
+/* ------------------CIUDAD PLANIFICADA------------------ */
+
+#articulo2 {
+    height: 30rem;
+    background-color: var(--fondo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: .2em solid var(--naranja);
+    border-bottom: .2em solid var(--naranja);
+    margin-bottom: 10vh;
+}
+
+h3 {
+    padding: 1em 0;
+    color: var(--hover);
+    font-size: 1.5em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+#articulo2 p {
+    padding: .5em 5em;
+    line-height: 1.7em;
+}
+
+
+/* ---------------LA CATEDRAL---------------- */
+
+
+#articulo3 {
+    height: 20rem;
+    background-color: var(--fondo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: .2em solid var(--naranja);
+    border-bottom: .2em solid var(--naranja);
+    margin-bottom: 10vh;
+}
+
+#articulo3 p {
+    padding: .5em 5em;
+    line-height: 1.7em;
+}
+
+.catedral {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.catedral img {
+    max-width: 10em;
+    margin-right: 8em;
+}
+
+
+/* --------------ARQUITECTURA-------------- */
+
+
+#articulo4 {
+    height: 15rem;
+    background-color: var(--fondo);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-top: .2em solid var(--naranja);
+    border-bottom: .2em solid var(--naranja);
+    margin-bottom: 10vh;
+}
+
+h4 {
+    padding: 1em 0;
+    color: var(--hover);
+    font-size: 1em;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+#articulo4 p {
+    padding: .5em 5em;
+    line-height: 1.7em;
+}
+
+.arquitectura {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.arquitectura img {
+    max-width: 8em;
+    margin-right: 8em;
+}
+
+/* ---------------- FORM------------------*/
+
+.contactanos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 70vh;
+}
+
+/* sin comentar titulo poner align-items flex-start */
+
+.formularioContacto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--fondo);
+    width: 80vw;
+    height: 50vh;
+    border-radius: 1vw;
+    padding: 2vw;
+  }
+  
+  .tituloContacto {
+    display: flex;
+    justify-content: flex-start;
+    font-size: 2em;
+    font-weight: 500;
+    padding-bottom: .5em;
+    color: var(--hover);
+    text-transform: uppercase;
+  }
+  
+  .nombreApellido{
+    padding-top: .5vh;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+  
+  .nombre{
+    padding-right: .5vh;
+    width: 100%;
+  }
+  
+  .apellido{
+    padding-left: .5vh;
+    width: 100%;
+  }
+  
+  .controls {
+    border: none;
+    width: 100%;
+    background: #fff;
+    padding: 1vh;
+    border-radius: 1vh;
+    margin-bottom: 1vh;
+    font-size: 2.5vh;
+  }
+  
+  .formularioContacto .boton {
+    width: 100%;
+    background: var(--verde);
+    border: none;
+    padding: 2vh;
+    margin-top: 1vh;
+    color: white;
+    font-size: 2vh;
+    border-radius: 60px;
+  }
+
+  .formularioContacto .boton:hover{
+    background-color: var(--hover);
+    cursor: pointer;
+  }
+
+
+
+
+
+/* --------------------FOOTER------------------ */
+
+.footer {
+    height: 80vh;
+    background-color: var(--hover);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer h2 {
+    color: var(--verde);
+}
+
+.alumnos {
+    text-align: center;
+}
+
+.footer p {
+    color: white;
+}
+
+.autores {
+    display: flex;
+    padding: .5em 5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.eve {
+    margin: 60px;
+}
+
+.eve img {
+    border-radius: 1em;
+}
+
+.eve li {
+    list-style: none;
+    color: white;
+}
+
+.eve a{
+    text-decoration: none;
+    color:var(--blanco);
+}
+
+.dario {
+    margin: 60px;
+}
+
+.dario li {
+    list-style: none;
+    color: white;
+}
+
+.dario img {
+    border-radius: 1em;
+}
+
+.dario a{
+    text-decoration: none;
+    color:var(--blanco);
+}
+
+.bibliografia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bibliografia a {
+    color: white;
+    text-decoration: none;
+}
+
+.bibliografia li {
+    list-style: none;
+    text-align: center;
+}
+
+.bibliografia a:hover {
+    color: var(--verde);
+}
+
+.bibliografia h2 {
+    color: var(--verde);
+    padding-bottom: 1em;
+}
+
+
+/* ----------------- ITINERARIO ------------------ */
+
+
+.paseoDelBosque{
+    height: 40vh;
+    background-color: var(--fondo);
+    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.paseoDelBosque img{
+    width: 15em;
+    padding-top: 3em;
+    padding-right: 2em;
+}
+
+.paseoDelBosqueTexto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.texto3 p {
+    padding: 0 5em;
+    line-height: 1.7em;
+}
+
+.museo{
+    height: 35vh;
+    background-color: var(--fondo);
+    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.museo img{
+    width: 15em;
+    padding-top: 3em;
+    padding-right: 2em;
+}
+
+.museoTexto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.ciudadNinios{
+    height: 40vh;
+    background-color: var(--fondo);
+    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.ciudadNiniosTexto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.ciudadNinios img{
+    width: 15em;
+    padding-top: 3em;
+    padding-right: 2em;
+}
+
+.estadio{
+    height: 30vh;
+    background-color: var(--fondo);
+    margin-bottom: 10vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.estadioTexto{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.estadio img{
+    width: 15em;
+    padding-top: 3em;
+    padding-right: 2em;
+}
+
+
+
+/*---------- noticias ---------*/
+
+
+.eventosenlacity {
+    background-color: var(--fondo);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.card {
+    background-color: #fff;
+    height: 70vh;
+    width: 20em;
+    margin: 2em;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
+    border-radius: 1em;
+    overflow: hidden;
+    transition: all 0.25s;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0px 12px 16px rgba(0, 0, 0, 0.2);
+
+
+}
+
+
+
+.eventosenlacity h2 {
+    color: var(--verde);
+    margin-top: 1em;
+}
+
+
+
+.eventos {
+    display: flex;
+    padding: .3em 3em;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.cardUl {
+    margin: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cardUl img {
+    border-radius: 1em;
+    height: 14em;
+    margin-bottom: 3em;
+}
+
+.cardUl li {
+    list-style: none;
+    color: var(--verde);
+}
+
+.cardUl :nth-child(2) {
+    text-transform: uppercase;
+    text-shadow: 1px 1px 10px black; 
+    padding: 0 1rem;
+}
+
